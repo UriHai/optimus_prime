@@ -15,6 +15,7 @@ bool isPrime(unsigned int num) {
         return false;
     }
 
+    // Iterate over all possible divisors (from 2 to half of the original number). If there is a divisor such that num % divisor equals 0 - return false. If no such divisor was found, return true.
     for (divisor = 2; divisor < num / 2 + 1; divisor++) {
         if (num % divisor == 0) {
             return false;
@@ -25,12 +26,12 @@ bool isPrime(unsigned int num) {
 
 int main() {
     unsigned int i = 0;
-    bool isIPrime = false;
+    bool isNumberPrime = false;
     cout << "Running isPrime numbers 0 - 10" << endl;
     for (i = 0; i < 11; i++) {
-        isIPrime = isPrime(i);
+        isNumberPrime = isPrime(i);
         cout << i << ": ";
-        if (isIPrime) {
+        if (isNumberPrime) {
             cout << "Prime" << endl;
         } else {
             cout << "Composite" << endl;
